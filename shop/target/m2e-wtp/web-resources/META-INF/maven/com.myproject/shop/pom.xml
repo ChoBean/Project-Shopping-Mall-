@@ -62,7 +62,18 @@
 			<artifactId>aspectjrt</artifactId>
 			<version>${org.aspectj-version}</version>
 		</dependency>	
+		<!-- Mail -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>${org.springframework-version}</version>	
+		</dependency>
 		
+		<dependency>
+			<groupId>com.sun.mail</groupId>
+			<artifactId>javax.mail</artifactId>
+			<version>1.6.1</version>
+		</dependency>
 		<!-- Logging -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -86,10 +97,6 @@
 			<artifactId>log4j</artifactId>
 			<version>1.2.15</version>
 			<exclusions>
-				<exclusion>
-					<groupId>javax.mail</groupId>
-					<artifactId>mail</artifactId>
-				</exclusion>
 				<exclusion>
 					<groupId>javax.jms</groupId>
 					<artifactId>jms</artifactId>
