@@ -4,24 +4,22 @@
 	    <select id="selectByEmail" resultType="com.myproject.shop.vo.UserVO">
         <![CDATA[
           SELECT
-              EMAIL,
-              NAME
+              email
           FROM
-              USER
+              user
           WHERE
-              EMAIL = #{email}       
+              email = #{email}     
       ]]>
     </select>
     
     <select id="selectById" resultType="com.myproject.shop.vo.UserVO">
         <![CDATA[
           SELECT
-              ID,
-              NAME
+              userid
           FROM
-              USER
+              user
           WHERE
-              ID = #{id}       
+              userid = #{userid}       
       ]]>
     </select>
     
@@ -29,19 +27,31 @@
         <![CDATA[
             INSERT INTO USER
             (
-                EMAIL,
-                ID,
-                NAME,
-                PASSWORD,
-                REGDATE
+                userid,
+                userpw,
+                email,
+                birth,
+                username,
+                phone,
+                adr1,
+                adr2,
+                adr3,
+                regdate,
+                gender
             )
             VALUES
             (
+                #{userid},
+                #{userpw},
                 #{email},
-                #{id},
-                #{name},
-                #{pw},
-                SYSDATE()
+                #{birth},
+                #{username},
+                #{phone},
+                #{adr1},
+                #{adr2},
+                #{adr3},
+                SYSDATE(),
+                #{gender}
             )
         ]]>
     </insert>

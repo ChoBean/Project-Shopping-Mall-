@@ -35,12 +35,12 @@ public class RegisterRequestValidator implements Validator{
                 errors.rejectValue("email", "bad", "올바르지 않는 형식입니다.");
             }
         }
-        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "required", "필수 정보 입니다.");
-        ValidationUtils.rejectIfEmpty(errors, "pw", "required", "필수 정보 입니다.");
-        ValidationUtils.rejectIfEmpty(errors, "checkPw", "required", "필수 정보 입니다.");
-        if(!regReq.getPw().isEmpty()) {
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "required", "필수 정보 입니다.");
+        ValidationUtils.rejectIfEmpty(errors, "userpw", "required", "필수 정보 입니다.");
+        ValidationUtils.rejectIfEmpty(errors, "checkuserPw", "required", "필수 정보 입니다.");
+        if(!regReq.getUserpw().isEmpty()) {
             if(!regReq.isPwEqualToCheckPw()) {
-                errors.rejectValue("checkPw", "nomatch", "비밀번호가 일치하지 않습니다.");
+                errors.rejectValue("checkuserPw", "nomatch", "비밀번호가 일치하지 않습니다.");
             }
         }
     } 

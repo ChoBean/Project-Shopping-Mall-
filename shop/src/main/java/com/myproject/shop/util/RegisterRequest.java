@@ -1,10 +1,10 @@
 package com.myproject.shop.util;
 
 public class RegisterRequest {
-	private String id;
-	private String name;
-	private String pw;
-	private String checkPw;
+	private String userid;
+	private String username;
+	private String userpw;
+	private String checkuserPw;
 	private String email;
 	private String birth;
 	private int phone;
@@ -12,33 +12,34 @@ public class RegisterRequest {
 	private String adr2;
 	private String adr3;
 	private String gender;
-	
-	public String getId() {
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
-	}
+
 	public boolean isPwEqualToCheckPw() {
-		return pw.equals(checkPw);
+		return userpw.equals(checkuserPw);
 	}
-	public String getName() {
-		return name;
+	
+	public String getUserid() {
+		return userid;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setUserid(String userid) {
+		this.userid = userid;
 	}
-	public String getPw() {
-		return pw;
+	public String getUsername() {
+		return username;
 	}
-	public void setPw(String pw) {
-		this.pw = pw;
+	public void setUsername(String username) {
+		this.username = username;
 	}
-	public String getCheckPw() {
-		return checkPw;
+	public String getUserpw() {
+		return userpw;
 	}
-	public void setCheckPw(String checkPw) {
-		this.checkPw = checkPw;
+	public void setUserpw(String userpw) {
+		this.userpw = userpw;
+	}
+	public String getCheckuserPw() {
+		return checkuserPw;
+	}
+	public void setCheckuserPw(String checkuserPw) {
+		this.checkuserPw = checkuserPw;
 	}
 	public String getEmail() {
 		return email;
@@ -82,6 +83,5 @@ public class RegisterRequest {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	
 	
 }

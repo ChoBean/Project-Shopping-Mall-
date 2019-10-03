@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>회원가입</title>
 	</head>
 	<body>
@@ -14,25 +14,28 @@
 	        <div class="col-lg-6">
 	             <form:form role="form" commandName="registerRequest" action="/register/joinconfirm" method="post">
 	                <div class="form-group input-group">
-	                    <form:input type="text" class="form-control" placeholder="NAME" path="name"/>
+	                    <form:input type="text" class="form-control" placeholder="NAME" path="username"/>
 	                </div>
 	                <div class="form-group input-group">
 	                    <form:input type="text" class="form-control" placeholder="Gender" path="gender"/>
 	                </div>
 	                <div class="form-group input-group">
+	                    <form:input type="text" class="form-control" placeholder="PhoneNumber" path="phone"/>
+	                </div>
+	                <div class="form-group input-group">
 	                    <form:input type="text" class="form-control" placeholder="생년월일 ex)19870425" path="birth"/>
 	                </div>
 	                <div class="form-group input-group">
-	                    <form:input type="text" class="form-control" placeholder="ID" path="id"/>
-	                    <form:errors path="id"/>
+	                    <form:input type="text" class="form-control" placeholder="ID" path="userid"/>
+	                    <form:errors path="userid"/>
 	                </div>
 						<div class="form-group input-group">
-	                    <form:password class="form-control" placeholder="Password" path="pw"/>
-	                    <form:errors path="pw"/>
+	                    <form:password class="form-control" placeholder="Password" path="userpw"/>
+	                    <form:errors path="userpw"/>
 	                </div>
 	                <div class="form-group input-group">
-	                    <form:password class="form-control" placeholder="Password Check" path="checkPw"/>
-	                    <form:errors path="checkPw"/>
+	                    <form:password class="form-control" placeholder="Password Check" path="checkuserPw"/>
+	                    <form:errors path="checkuserPw"/>
 	               	</div>
 	                <div class="form-group input-group">
 	                    <form:input type="email" class="form-control" placeholder="Email" path="email"/>
