@@ -38,6 +38,12 @@ public class RegisterRequestValidator implements Validator{
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "username", "required", "필수 정보 입니다.");
         ValidationUtils.rejectIfEmpty(errors, "userpw", "required", "필수 정보 입니다.");
         ValidationUtils.rejectIfEmpty(errors, "checkuserPw", "required", "필수 정보 입니다.");
+        ValidationUtils.rejectIfEmpty(errors, "gender", "required", "필수 정보 입니다.");
+        ValidationUtils.rejectIfEmpty(errors, "phone", "required", "필수 정보 입니다.");
+        ValidationUtils.rejectIfEmpty(errors, "birth", "required", "필수 정보 입니다.");
+        ValidationUtils.rejectIfEmpty(errors, "adr1", "required", "필수 정보 입니다.");
+        ValidationUtils.rejectIfEmpty(errors, "adr2", "required", "필수 정보 입니다.");
+        ValidationUtils.rejectIfEmpty(errors, "adr3", "required", "필수 정보 입니다.");
         if(!regReq.getUserpw().isEmpty()) {
             if(!regReq.isPwEqualToCheckPw()) {
                 errors.rejectValue("checkuserPw", "nomatch", "비밀번호가 일치하지 않습니다.");

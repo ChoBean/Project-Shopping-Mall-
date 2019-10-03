@@ -55,5 +55,13 @@
             )
         ]]>
     </insert>
-  
+  	
+  	<select id="idcheck" parameterType="String" resultType="Integer">
+  		<![CDATA[
+  			SELECT
+  				COUNT(*) FROM user
+  			WHERE
+  				userid = #{userid}
+		]]>
+  	</select>
 </mapper>

@@ -12,11 +12,12 @@ public class UserDAO extends AbstractDAO{
 		return (UserVO)selectOne("user.selectByEmail", email);
 	}
 	 
-	public UserVO selectById(String id) {
-		return (UserVO)selectOne("user.selectById", id);
+	public UserVO selectById(String userid) {
+		return (UserVO)selectOne("user.selectById", userid);
 	}
 	 
 	public void insertUser(RegisterRequest regReq) {
 		insert("user.register", regReq);
 	}
+	
 }
