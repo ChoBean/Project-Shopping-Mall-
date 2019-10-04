@@ -8,4 +8,6 @@ public interface UserService {
 	 void register(RegisterRequest regReq) throws Exception;
 	 
 	 UserVO idCheck(String userid) throws Exception;
+	 
+	 UserVO userAuth(UserVO user) throws Exception;
 }

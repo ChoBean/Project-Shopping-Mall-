@@ -64,4 +64,28 @@
   				userid = #{userid}
 		]]>
   	</select>
+  	
+  	<update id="createAuthKey">
+  		UPDATE user
+  		SET
+  			authkey = #{authkey}
+  		WHERE
+  			email = #{email}
+  	</update>
+  	
+  	
+  	<select id="chkAuth" resultType="com.myproject.shop.vo.UserVO">
+  		SELECT
+  			authkey FROM user
+  		WHERE
+  			email = #{email}
+  	</select>
+  	
+  	<update id="userAuth">
+  		UPDATE user
+  		SET
+  			authkey = 'O'
+  		WHERE
+  			email = #{email}
+  	</update>
 </mapper>

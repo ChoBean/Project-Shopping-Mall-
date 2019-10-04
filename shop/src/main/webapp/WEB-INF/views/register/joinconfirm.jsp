@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	가입성공
+	메일 인증 후 이용 부탁드립니다.
 </body>
 </html>

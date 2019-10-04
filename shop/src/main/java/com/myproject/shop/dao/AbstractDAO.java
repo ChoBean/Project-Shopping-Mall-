@@ -30,6 +30,7 @@ public class AbstractDAO{
 	      
 	public Object selectOne(String queryId, Object params){
 		return sqlSession.selectOne(queryId, params);
-	}	      
+	}
+	
 }
 

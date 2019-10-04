@@ -14,7 +14,7 @@
 		<div class="panel-body">
 	    <div class="row">
 	        <div class="col-lg-6">
-	             <form:form role="form" commandName="registerRequest" action="/register/joinconfirm" method="post">
+	             <form:form role="form" commandName="registerRequest" action="/joinConfirm" method="post">
 	                <div class="form-group input-group">
 	                    <form:input type="text" class="form-control" placeholder="NAME" path="username"/>
 	                    <form:errors path="username"/>
